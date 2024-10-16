@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #8e44ad, #f39c12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    width: 60%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.header p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f39c12;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+#resultSection {
+    margin-top: 30px;
+}
+
+#resultSection h2, h3 {
+    font-size: 24px;
+}
+
+#resultSection p {
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+#mainSentiment {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.detailed-breakdown {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.detailed-breakdown p {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+#entitiesResult {
+    font-size: 18px;
+    color: #fff;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #mainSentiment {
+        font-size: 28px; /* Smaller sentiment text for mobile */
+    }
+
+    .detailed-breakdown {
+        font-size: 14px;
+    }
+
+    #entitiesResult {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #mainSentiment {
+        font-size: 24px; /* Even smaller for small mobile devices */
+    }
+
+    .detailed-breakdown {
+        font-size: 12px;
+    }
+
+    #entitiesResult {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 5px;
+        margin: 20px;
+    }
+}
