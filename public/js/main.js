@@ -1,30 +1,9 @@
-// document.getElementById('analyzeBtn').addEventListener('click', async () => {
-//     const text = document.getElementById('textInput').value;
-//     const file = document.getElementById('fileInput').files[0];
-    
-//     const formData = new FormData();
-//     if (text) formData.append('text', text);
-//     if (file) formData.append('file', file);
-
-//     const response = await fetch('/analyze', {
-//         method: 'POST',
-//         body: formData
-//     });
-//     const result = await response.json();
-    
-//     // Display the result
-//     document.getElementById('sentimentResult').textContent = JSON.stringify(result.sentiment, null, 2);
-//     document.getElementById('entitiesResult').textContent = result.entities.join(', ');
-//     document.getElementById('resultSection').classList.remove('hidden');
-// });
 
 document.getElementById('analyzeBtn').addEventListener('click', async () => {
     const text = document.getElementById('textInput').value;
-    const file = document.getElementById('fileInput').files[0];
 
     const formData = new FormData();
     if (text) formData.append('text', text);
-    if (file) formData.append('file', file);
 
     const response = await fetch('/analyze', {
         method: 'POST',
